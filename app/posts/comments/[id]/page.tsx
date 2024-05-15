@@ -4,7 +4,7 @@ import {
   dehydrate,
 } from "@tanstack/react-query";
 import PostComments from "./PostComments";
-import { PostComments as PostCommentsAPI } from "@/httpRequest/post";
+import { PostComments as PostCommentsAPI } from "@/api/post";
 
 type CommentsProps = { params: { id: string } };
 

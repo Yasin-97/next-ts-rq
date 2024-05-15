@@ -1,5 +1,5 @@
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
-import { getPosts, PostComments } from "@/httpRequest/post";
+import { getPosts, PostComments } from "@/api/post";
 
 export function useGetPosts({ page }: { page: string }) {
   return useQuery({

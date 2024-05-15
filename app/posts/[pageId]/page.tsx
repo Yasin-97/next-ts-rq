@@ -1,6 +1,6 @@
 import { dehydrate } from "@tanstack/query-core";
 import { HydrationBoundary, QueryClient } from "@tanstack/react-query";
-import { getPosts } from "@/httpRequest/post";
+import { getPosts } from "@/api/post";
 import Posts from "./Posts";
 
 type PostsProps = { params: { pageId: string } };

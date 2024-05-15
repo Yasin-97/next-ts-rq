@@ -1,13 +1,13 @@
 "use client";
 
-import { useGetPostComment } from "@/hooks/postAPI";
+import { useGetPostComment } from "@/queries/post";
 
 type PostCommentsProps = { postId: string };
 
 const PostComments = ({ postId }: PostCommentsProps) => {
-  const { data: PostComment, isLoading } = useGetPostComment({ postId });
+  const { data: PostComment, isFetching } = useGetPostComment({ postId });
 
-  if (isLoading) return <h1>client Loading ...</h1>;
+  if (isFetching) return <h1>client Loading ...</h1>;
   return (
     <div
       style={{

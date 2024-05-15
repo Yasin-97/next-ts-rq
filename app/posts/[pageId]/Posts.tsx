@@ -1,14 +1,14 @@
 "use client";
-import { useGetPosts } from "@/hooks/postAPI";
+import { useGetPosts } from "@/queries/post";
 import Link from "next/link";
 
 type PostsProps = { pageId: string };
 
 const Posts = ({ pageId }: PostsProps) => {
   const pageIndex = Number(pageId);
-  const { data: Posts, isLoading } = useGetPosts({ page: pageId });
+  const { data: Posts, isFetching } = useGetPosts({ page: pageId });
 
-  if (isLoading) return <h1>client Loading ...</h1>;
+  if (isFetching) return <h1>client Loading ...</h1>;
 
   return (
     <>
